@@ -1,21 +1,17 @@
 {
   "files": {
-    "main.css": "/Doable/static/css/main.b0f15b25.chunk.css",
-    "main.js": "/Doable/static/js/main.2c439f91.chunk.js",
-    "main.js.map": "/Doable/static/js/main.2c439f91.chunk.js.map",
-    "runtime-main.js": "/Doable/static/js/runtime-main.08cd753d.js",
-    "runtime-main.js.map": "/Doable/static/js/runtime-main.08cd753d.js.map",
-    "static/js/2.efd0dc0f.chunk.js": "/Doable/static/js/2.efd0dc0f.chunk.js",
-    "static/js/2.efd0dc0f.chunk.js.map": "/Doable/static/js/2.efd0dc0f.chunk.js.map",
+    "main.css": "/Doable/static/css/main.b43b8606.css",
+    "main.js": "/Doable/static/js/main.bb7b0062.js",
+    "static/media/Purely_Me_Regular.eot": "/Doable/static/media/Purely_Me_Regular.2face01721be721699dc.eot",
+    "static/media/Purely_Me_Regular.ttf": "/Doable/static/media/Purely_Me_Regular.b5357da53e78f3dd505d.ttf",
+    "static/media/purely_me_regular-webfont.woff": "/Doable/static/media/purely_me_regular-webfont.de8a9300b4bac4c53c16.woff",
+    "static/media/purely_me_regular-webfont.woff2": "/Doable/static/media/purely_me_regular-webfont.4eac6485e215fd08cbeb.woff2",
     "index.html": "/Doable/index.html",
-    "static/css/main.b0f15b25.chunk.css.map": "/Doable/static/css/main.b0f15b25.chunk.css.map",
-    "static/js/2.efd0dc0f.chunk.js.LICENSE.txt": "/Doable/static/js/2.efd0dc0f.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/Doable/static/media/purely_me_regular-webfont.de8a9300.woff"
+    "main.b43b8606.css.map": "/Doable/static/css/main.b43b8606.css.map",
+    "main.bb7b0062.js.map": "/Doable/static/js/main.bb7b0062.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.08cd753d.js",
-    "static/js/2.efd0dc0f.chunk.js",
-    "static/css/main.b0f15b25.chunk.css",
-    "static/js/main.2c439f91.chunk.js"
+    "static/css/main.b43b8606.css",
+    "static/js/main.bb7b0062.js"
   ]
 }
