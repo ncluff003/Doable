@@ -1,0 +1,359 @@
+@font-face {
+  font-family: Purely Me;
+  src: url("./purely_me_regular-webfont.woff2") format("woff2"), url("./purely_me_regular-webfont.woff") format("woff"), url("./Purely_Me_Regular.eot"), url("./Purely_Me_Regular.ttf");
+}
+
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: MADE Tommy Soft;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  background-color: #222222;
+  overflow-x: hidden;
+}
+
+.App {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.content {
+  height: 1vh;
+  width: 40%;
+  text-align: center;
+}
+
+.app-title {
+  font-family: Dancing Script, MADE Tommy Soft, Purely Me;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 10rem;
+  color: #0047ab;
+}
+
+.toDoForm {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addToDoLabel {
+  position: relative;
+  align-self: flex-start;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  /* font-family: Purely Me; */
+  font-size: 2rem;
+  color: gold;
+}
+
+.addToDo {
+  position: relative;
+  height: 3rem;
+  width: 50%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.3rem groove #fafafadc;
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  color: gold;
+}
+
+.addToDo:focus {
+  outline: none;
+  border-bottom: 0.3rem groove gold;
+}
+
+.createToDo {
+  position: relative;
+  height: 5rem;
+  width: 25%;
+  align-self: flex-end;
+  margin-top: 1.5rem;
+  margin-right: 25%;
+  padding: 1rem;
+  background-color: transparent;
+  border: 0.2rem solid gold;
+  border-radius: 2rem;
+  font-family: Purely Me;
+  font-size: 1.6rem;
+  color: gold;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.createToDo:hover {
+  cursor: pointer;
+  background-color: rgba(255, 215, 0, 0.7);
+  color: #fafafa;
+}
+
+.createToDo:active {
+  background-color: gold;
+}
+
+.addToDo::-webkit-input-placeholder {
+  opacity: 0;
+  color: gold;
+}
+
+.addToDo:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.addToDo:not(:placeholder-shown) + label,
+.addToDo:focus + label {
+  transform: translate(-2rem, -5rem);
+}
+
+.task-container {
+  position: relative;
+  height: 55rem;
+  width: 80%;
+  border: 0.2rem solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  border-left: 0.4rem groove #333333;
+  border-right: 0.4rem groove #333333;
+}
+
+.taskContainer {
+  position: relative;
+  height: min-content;
+  width: 100%;
+  padding: 0 2rem;
+  font-family: Purely Me;
+  font-size: 1.6rem;
+  color: gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.task {
+  position: relative;
+  height: 7rem;
+  width: 100%;
+  padding: 0 1rem 0 2rem;
+  display: flex;
+  align-items: center;
+  border: 0.2rem solid rgba(207, 53, 46, 0.7);
+  border-radius: 2rem;
+  transition: border 0.5s;
+  margin: 0.5rem 0;
+}
+
+.task-completed {
+  border: 0.2rem solid #008013;
+  text-decoration: 0.2rem #008013 line-through;
+}
+
+.taskDescription {
+  position: relative;
+  height: 60%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskDescriptionText {
+  font-size: 2rem;
+  color: rgba(207, 53, 46, 0.7);
+  transition: color 0.5s;
+}
+
+.task-completed .taskDescription .taskDescriptionText {
+  color: #008013;
+}
+
+.task:hover,
+.task-completed:hover {
+  cursor: pointer;
+  border: 0.2rem solid gold;
+}
+
+.task:hover .taskDescription .taskDescriptionText {
+  color: gold;
+}
+
+.task-completed:hover .taskDescription .taskDescriptionText {
+  text-decoration: 0.2rem gold line-through;
+}
+
+.taskHandle {
+  position: relative;
+  height: 60%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.taskHandle .taskDescriptionCompleted {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: min-content;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: #38d927;
+}
+
+.completeButton,
+.deleteButton {
+  position: relative;
+  background-color: transparent;
+  height: 100%;
+  width: 4rem;
+  margin: 0 0.5rem;
+  color: #38d927aa;
+  border: 0.2rem solid #fafafa11;
+  border-radius: 0.5rem;
+  transition: border 0.5s, background-color 0.5s, color 0.5s;
+}
+.deleteButton {
+  color: #cf352eaa;
+}
+
+.completeButton:hover,
+.deleteButton:hover {
+  cursor: pointer;
+}
+
+.completeButton:hover {
+  background-color: #38d927;
+  color: #fafafa;
+  border: 0.2rem solid #fafafa;
+}
+
+.deleteButton:hover {
+  background-color: #cf352e;
+  color: #fafafa;
+  border: 0.2rem solid #fafafa;
+}
+
+@media screen and (min-width: 300px) {
+  .app-title {
+    font-size: 8rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .addToDo {
+    width: 100%;
+  }
+
+  .addToDoLabel {
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .createToDo {
+    width: 50%;
+  }
+
+  .task-container {
+    width: 90%;
+  }
+
+  .taskDescriptionText {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .app-title {
+    font-size: 10rem;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .addToDo {
+    width: 75%;
+  }
+
+  .addToDoLabel {
+    width: 75%;
+    margin: 2rem auto;
+  }
+
+  .createToDo {
+    width: 35%;
+    margin: 2rem 17.5% 0 0;
+  }
+
+  .task-container {
+    width: 75%;
+  }
+
+  .taskDescriptionText {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .app-title {
+    font-size: 10rem;
+  }
+
+  .content {
+    width: 40%;
+  }
+
+  .addToDo {
+    width: 50%;
+  }
+
+  .addToDoLabel {
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .createToDo {
+    width: 25%;
+    margin-top: 1.5rem;
+    margin-right: 25%;
+  }
+
+  .task-container {
+    width: 80%;
+  }
+
+  .taskDescriptionText {
+    font-size: 2rem;
+  }
+}
